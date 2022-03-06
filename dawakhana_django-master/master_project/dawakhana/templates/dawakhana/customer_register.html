@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Basic page needs ============================================ -->
+	<title>Register | The Dawakhana</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Mobile specific metas
+		============================================ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> {% include 'dawakhana/inc/base_link.html' %}
+	<!--[if lte IE 9]>
+			<link rel="stylesheet" type="text/css" href="css/oldie.css">
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="wide_layout">
+
+		{% include 'dawakhana/inc/header.html' %}
+
+		<!-- - - - - - - - - - - - - - Page Wrapper - - - - - - - - - - - - - - - - -->
+
+		<div class="secondary_page_wrapper">
+
+			<div class="container">
+
+				<!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+				<ul class="breadcrumbs">
+
+					<li><a href="{% url 'homepage' %}">Home</a></li>
+					<li>Customer Register</li>
+
+				</ul>
+
+				<section class="section_offset">
+					<div class="row">
+						<div class="col-md-3"></div>
+						<div class="col-md-6">
+							<form class="type_2" method="post" action="{% url 'customer_register' %}">
+								{% csrf_token %}
+								<h3 class="text-center">Create your account</h3>
+
+								<div class="theme_box">
+
+
+
+									<ul>
+
+										<li class="row">
+
+											<div class="col-sm-6">
+
+												<label for="first_name" class="required">First Name</label> {{c_form.first_name}}
+												<!--<input type="text" name="" id="first_name" placeholder="Please enter first name"/>-->
+
+											</div>
+											<!--/ [col] -->
+
+											<div class="col-sm-6">
+
+												<label for="last_name" class="required">Last Name</label> {{c_form.last_name}}
+												<!--<input type="text" name="" id="last_name" placeholder="Please enter last name"/>-->
+
+											</div>
+											<!--/ [col] -->
+
+										</li>
+										<!--/ .row -->
+
+										<li class="row">
+
+
+
+											<div class="col-sm-12">
+
+												<label for="email_address" class="required">Email Address</label> {{c_form.email}}
+												<!--<input type="text" name="" id="email_address" placeholder="Please enter your email id"/>-->
+
+											</div>
+											<!--/ [col] -->
+
+										</li>
+										<!--/ .row -->
+
+
+										<li class="row">
+
+											<div class="col-sm-12">
+
+												<label for="phone" class="required">Phone</label> {{c_form.phone}}
+												<!--<input type="text" name="" id="phone" placeholder="Please enter your phone no."/>-->
+
+											</div>
+											<!--/ [col] -->
+
+
+
+										</li>
+										<!--/ .row -->
+
+										<li class="row">
+
+											<div class="col-sm-6">
+
+												<label for="password" class="required">Set Password</label> {{c_form.password1}}
+												<!--<input type="password" name="" id="password" placeholder="Please enter password"/>-->
+
+											</div>
+											<!--/ [col] -->
+
+											<div class="col-sm-6">
+
+												<label for="confirm" class="required">Retype Password</label> {{c_form.password2}}
+												<!--<input type="password" name="" id="confirm" placeholder="Please confirm your password"/>-->
+
+											</div>
+											<!--/ [col] -->
+
+										</li>
+										<!--/ .row -->
+										<li>
+											<hr/>
+										</li>
+										<li class="row">
+
+
+											<div class="col-sm-6">
+												<div class="col-sm-1 col-xs-1 no-padding">
+													<input type="checkbox" class="terms-check" name="terms" />
+												</div>
+												<div class="col-sm-11 col-xs-11 no-padding">
+													<p>I accept <a href="">Terms & Conditions</a></p>
+												</div>
+											</div>
+											<!--/ [col] -->
+
+											<div class="col-sm-6">
+												<div style="transform:scale(0.77);-webkit-transform:scale(0.77);transform-origin:0 0;-webkit-transform-origin:0 0;" class="g-recaptcha" data-sitekey="6LcM3VoUAAAAAFYOUFpjBYmQ8qGLs3oxx--0LsD7"></div>
+											</div>
+											<!--/ [col] -->
+
+										</li>
+										<!--/ .row -->
+									</ul>
+								</div>
+								<footer class="bottom_box on_the_sides">
+
+									<div class="left_side">
+										<span class="prompt">Required Fields</span>
+									</div>
+
+									<div class="right_side">
+										<button type="submit" value="submit" name="submit" class="button_blue middle_btn">Submit</button>
+
+									</div>
+
+								</footer>
+							</form>
+						</div>
+						<div class="col-md-3"></div>
+						<div class="col-md-12 text-center">
+							<br/>
+							<h5>Already have an account? <a href="{% url 'user_login' %}" class="text-red">Login</a></h5></div>
+					</div>
+
+
+				</section>
+
+
+
+
+			</div>
+			<!--/ .container-->
+
+		</div>
+		<!--/ .page_wrapper-->
+
+
+		{% include 'dawakhana/inc/footer.html'%}
+	</div>
+	<!--/ [layout]-->
+	<script src="https://www.google.com/recaptcha/api.js"></script>
+</body>
+
+</html>

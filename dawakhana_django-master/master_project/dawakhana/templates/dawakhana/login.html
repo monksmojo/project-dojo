@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{% load static %}
+	<!-- Basic page needs
+		============================================ -->
+	<title>Login | The Dawakhana</title>
+	<meta charset="utf-8">
+	<meta name="author" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- Mobile specific metas
+		============================================ -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+	<!-- Old IE stylesheet
+		============================================ -->
+	<!--[if lte IE 9]>
+			<link rel="stylesheet" type="text/css" href="css/oldie.css">
+		<![endif]-->
+	{% include 'dawakhana/inc/base_link.html' %}
+</head>
+
+<body>
+
+	<!-- - - - - - - - - - - - - - Styleswitcher - - - - - - - - - - - - - - - - -->
+
+
+
+	<!-- - - - - - - - - - - - - - end Styleswitcher - - - - - - - - - - - - - - - - -->
+
+	<!-- - - - - - - - - - - - - - Main Wrapper - - - - - - - - - - - - - - - - -->
+
+	<div class="wide_layout">
+
+		{% include 'dawakhana/inc/header.html' %}
+
+		<!-- - - - - - - - - - - - - - Page Wrapper - - - - - - - - - - - - - - - - -->
+
+		<div class="secondary_page_wrapper">
+
+			<div class="container">
+
+				<!-- - - - - - - - - - - - - - Breadcrumbs - - - - - - - - - - - - - - - - -->
+
+				<ul class="breadcrumbs">
+
+					<li><a href="{% url 'homepage' %}">Home</a></li>
+					<li>Login</li>
+
+				</ul>
+
+				<section class="section_offset">
+					<div>
+
+
+						<div class="row">
+
+							<div class="col-md-3"></div>
+							<div class="col-md-6">
+								<h3 class="text-center">Login</h3>
+
+								<p class="subcaption text-center">Please log in below:</p>
+								<div class="relative">
+
+
+									<div class="table_layout">
+
+										<div class="table_row">
+
+
+
+											<div class="table_cell">
+
+												<section>
+
+
+
+													<form id="login_form" class="type_2" action="{% url 'user_login' %}" method="post">
+														{% csrf_token %}
+
+														<ul>
+
+															<li class="row">
+
+																<div class="col-xs-12">
+
+																	<label for="login_email" class="required">Email address</label> {{login_form.email}}
+																	<!--<input type="email" name="" id="login_email">-->
+
+																</div>
+
+															</li>
+
+															<li class="row">
+
+																<div class="col-xs-12">
+
+																	<label for="login_password" class="required">Password</label> {{login_form.password1}}
+
+																</div>
+
+															</li>
+
+															<li class="row">
+
+																<div class="col-xs-12">
+
+																	<div class="on_the_sides">
+
+																		<div class="left_side">
+																			<span class="prompt">Required Fields</span>
+																		</div>
+
+																		<div class="right_side">
+
+																			<button type="submit" form="login_form" class="button_blue middle_btn">Login</button>
+
+																		</div>
+
+																	</div>
+
+																</div>
+
+															</li>
+
+														</ul>
+
+													</form>
+
+												</section>
+
+											</div>
+											<!--/ .table_cell -->
+
+										</div>
+										<!--/ .table_row -->
+
+										<div class="table_row">
+
+
+											<div class="table_cell text-right">
+												<a href="#" class="small_link">Forgot your password?</a>
+
+
+											</div>
+											<!--/ .table_cell -->
+
+										</div>
+										<!--/ .table_row -->
+
+									</div>
+									<!--/ .table_layout -->
+
+								</div>
+								<!--/ .relative -->
+
+							</div>
+						</div>
+
+						<div class="col-md-3"></div>
+						<div class="col-md-12 text-center">
+							<br/>
+							<h5>New Customer?
+								<a href="{% url 'customer_register' %}" class="text-red">Customer Register Now</a><span class="col-md-12 text-center"></span>
+							</h5>
+						</div>
+
+					</div>
+				</section>
+				<!--/ .section_offset -->
+
+			</div>
+			<!--/ .container-->
+
+		</div>
+		<!--/ .page_wrapper-->
+
+		<!-- - - - - - - - - - - - - - End Page Wrapper - - - - - - - - - - - - - - - - -->
+
+		<!-- - - - - - - - - - - - - - Footer - - - - - - - - - - - - - - - - -->
+
+		{% include 'dawakhana/inc/footer.html' %}
+
+		<!-- - - - - - - - - - - - - - End Footer - - - - - - - - - - - - - - - - -->
+
+	</div>
+	<!--/ [layout]-->
+
+	<!-- - - - - - - - - - - - - - End Main Wrapper - - - - - - - - - - - - - - - - -->
+
+	<!-- - - - - - - - - - - - - - Social feeds - - - - - - - - - - - - - - - - -->
+
+
+
+	<!-- - - - - - - - - - - - - - End Social feeds - - - - - - - - - - - - - - - - -->
+</body>
+
+</html>
