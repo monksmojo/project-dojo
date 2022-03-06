@@ -1,0 +1,311 @@
+/* <!--Learned How  To Make Responsive Pure CSS Navbar Menu Tutorial (No Javascript) Tutorial by Follow Andrew youtube channel BIG Thanks Sir--> */
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+/*declaring css variable*/
+
+:root {
+  --primary-color: rgba(13, 110, 139, 0.45);
+  --overlay-color: rgba(24, 39, 51, 0.85);
+  --menu-speed: 0.75;
+}
+
+/*end of declaring variables*/
+
+/*default styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+/*end of default styles*/
+
+/*styling of navbar on large screen*/
+.menu-wrap {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  background-color: #5b78c7;
+  width: 100%;
+}
+
+.menu-wrap .toggler {
+  display: none;
+}
+
+.menu-wrap .logo-heading {
+  float: left;
+  padding: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.menu-wrap .hamburger {
+  display: none;
+}
+
+.menu-wrap .menu {
+  float: right;
+  display: block;
+  width: 80%;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-wrap .menu > div > div > ul > li {
+  list-style: none;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.menu-wrap .menu > div > div > ul > li > a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-wrap::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+/*end of navbar*/
+
+/*showcase styling*/
+.showcase {
+  background-color: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+  position: relative;
+}
+
+.showcase::before {
+  content: " ";
+  background: url("./img/nav-3-img.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/*showcase-inner class is inserted in the container*/
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*will work vertically instead of horizontally because of flex-direction: column;*/
+  align-items: center;
+  text-align: center;
+  max-width: 80%;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+.container h2 {
+  font-size: 3rem;
+  background-color: hsl(60, 100%, 50%, 0.8);
+  color: black;
+}
+
+.container h3 {
+  font-size: 1.3rem;
+  background-color: hsl(60, 100%, 50%, 0.8);
+  color: black;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  background-color: yellow;
+  color: black;
+  padding: 0.75rem 1rem;
+  margin-top: 2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.7;
+  transition: opacity 0.5s ease-in;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+/*end of showcase styling*/
+/*start of media queries*/
+@media screen and (max-width: 890px) {
+  /*navbar styling*/
+  .menu-wrap {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+  }
+
+  .menu-wrap .logo-heading {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  /*so how this works
+  we have a check box with index of 2 so it will be above all element but will be transparent and we have hamburger icon just below the checkbox
+  so when the hamburger icon gets checked in reality the check box gets checked because its on the top of icon but invisible*/
+  .menu-wrap .toggler {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0;
+  }
+  /**/
+  /*hamburger icon*/
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px;
+    height: 40px;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+
+  /*making HAMBURGER lines*/
+  .menu-wrap .hamburger > div {
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in;
+  }
+  /*end of hamburger line*/
+  .menu-wrap .hamburger > div::before,
+  .menu-wrap .hamburger > div::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: -10px;
+    z-index: 1;
+  }
+
+  .menu-wrap .hamburger > div::after {
+    top: 10px;
+  }
+  /*end of hamburger lines*/
+  /*end of navbar styling*/
+
+  /*toggling of menu*/
+  /* making of x button */
+  .menu-wrap .toggler:checked ~ .hamburger > div {
+    transform: rotate(135deg);
+  }
+
+  .menu-wrap .toggler:checked ~ .hamburger > div::before,
+  .menu-wrap .toggler:checked ~ .hamburger > div::after {
+    top: 0px;
+    transform: rotate(90deg);
+  }
+  /* end of x button */
+  /*end of toggling*/
+
+  /*show menu*/
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    transition-duration: var(--menu-speed);
+  }
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+  }
+
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+  }
+  /*end show menu*/
+
+  /* menu styling */
+
+  .menu-wrap .menu {
+    position: fixed;
+    float: none;
+    padding: 0;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    /* border-radius: 40%; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 90vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .menu-wrap .menu > div > div > ul {
+    display: block;
+  }
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.4s ease;
+  }
+  /* end of menu styling */
+}

@@ -1,0 +1,121 @@
+<!--ACME WEB DESIGN RESPONSIVE WEBSITE -->
+<!-- THE CREDIT OF THIS WHOLE WEBSITE DESIGN AND ITS TEACHING GOES TO BRAD  OWNER OF TRAVERSY MEDIA YOUTUBE CHANNEL -->
+<!--I MONKS_MOJO IS LEARNING HOW TO CREATE RESPONSIVE WEB SITE.
+SO I DIDN'T COPIED ANY OF THE ORIGINAL CODE I TYPED IT WHILE WATCHING  THE TUTORIALS-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="monks_mojo" />
+    <link rel="stylesheet" href="Acme-styles.css" />
+    <title>ACME WEBSITE DESIGNS| Services</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="branding">
+          <h1><span>Acme</span> Web Design</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="Acme-index.html">Home</a></li>
+            <li><a href="Acme-about.html">About</a></li>
+            <li><a class="active" href="Acme-service.html">Service</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section id="news-letter">
+      <div class="container">
+        <h1>Subscribe to our news-letter</h1>
+        <form action="#">
+          <input
+            type="email"
+            name="email"
+            placeholder="enter email address"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="button-1">Subscribe</button>
+        </form>
+      </div>
+    </section>
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <h1 class="main-title">Services</h1>
+          <ul id="service">
+            <li>
+              <h3 class="main-title">Website Services</h3>
+              <p>
+                some dummy text some dummy text some dummy text some dummy text
+                some dummy text
+              </p>
+              <i>price: $1,000 - 3,000</i>
+            </li>
+
+            <li>
+              <h3 class="main-title">Website Hosting</h3>
+              <p>
+                some dummy text some dummy text some dummy text some dummy text
+                some dummy text
+              </p>
+              <i>price: $25 a month</i>
+            </li>
+
+            <li>
+              <h3 class="main-title">Website Maintenance</h3>
+              <p>
+                some dummy text some dummy text some dummy text some dummy text
+                some dummy text
+              </p>
+              <i>price: $5 a month</i>
+            </li>
+          </ul>
+        </article>
+        <aside id="side-bar" class="dark">
+          <h3 class="main-title">Get A Quote</h3>
+          <form class="quote" action="#">
+            <div>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="enter your name"
+              />
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="enter your email"
+              />
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <textarea
+                name="comments"
+                id="comments"
+                placeholder="leave message"
+              ></textarea>
+            </div>
+
+            <button class="button-1" type="submit">Submit</button>
+          </form>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <p>
+        Acme web Design Copyright &COPY;october 2019
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+*,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #5b78c7;
+  color: black;
+}
+a {
+  color: black;
+}
+
+header {
+  position: sticky;
+  top: 0;
+}
+#nav-bar {
+  background-color: white;
+  box-shadow: 1px 1px 4px 0 rgb(0, 0, 0, 0.1 /*10 % opacity*/);
+  width: 100%;
+  z-index: 3;
+}
+
+#nav-bar .logo {
+  float: left;
+  font-size: 2em;/*32 px(2*16(default pixel size))*/
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+#nav-bar #hamburger-btn {
+  display: none;
+}
+
+ul.nav-links {
+  float: right;
+  list-style: none;
+  overflow: hidden;
+}
+
+ul.nav-links li {
+  display: inline-block;
+}
+
+ul.nav-links a {
+  display: block;
+  border-right: 1px solid #aaa;
+  padding: 20px;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+ul.nav-links a:hover {
+  background-color: #dddddd;
+}
+
+#nav-bar::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+header h2 {
+  display: block;
+  padding: 20px 0px;
+  background-color: #5b78c7;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+}
+
+@media screen and (max-width: 750px) {
+  ul.nav-links {
+    clear: both;
+    float: none;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  ul.nav-links li {
+    display: block;
+  }
+
+  .hamburger-icon {
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+  }
+
+  /************creation of hamburger icon*************/
+  .hamburger-icon span {
+    width: 18px;
+    height: 2px;
+    display: block;
+    background: black;
+    position: relative;
+    transition: background 0.2s ease-out;
+  }
+
+  .hamburger-icon span::before {
+    background-color: black;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    top: 5px;
+  }
+
+  .hamburger-icon span::after {
+    background-color: black;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s ease-out;
+    position: absolute;
+    top: -5px;
+  }
+  /*******end of creation of******/
+
+  /*toggling of menu with hamburger-btn*/
+  #hamburger-btn {
+    display: none;
+  }
+  #hamburger-btn:checked ~ ul.nav-links {
+    max-height: 250px;
+  }
+  /***end of toggling**/
+
+  /*animation of hamburger icon*/
+  #hamburger-btn:checked ~ .hamburger-icon span {
+    background: none;
+  }
+
+  #hamburger-btn:checked ~ .hamburger-icon span::before {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+  #hamburger-btn:checked ~ .hamburger-icon span::after {
+    top: 0;
+    transform: rotate(+45deg);
+  }
+  /*end of animation*/
+}

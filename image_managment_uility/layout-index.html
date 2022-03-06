@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="image management utility">
+    <title>Image Management Utility </title>
+    <link rel="stylesheet" href="./layout-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- starting of container -->
+    <div class="container">
+        <h2 class="banner-heading">Image Management Utility</h2>
+
+        <!-- upper section  -->
+        <div id="upper-section">
+
+            <!-- upload section appearing on left -->
+            <div class="upload-section">
+                <h3>Please select an image to upload(Max Size-1MB)</h3>
+                <input type="file" name="img-upload" id="img-upload">
+            </div>
+            <!-- end of upload section -->
+
+            <!-- button section appearing on right -->
+            <div class="btn-section">
+                <button type="submit">Submit</button>
+                <button type="submit">Cancel</button>
+            </div>
+            <!-- end of button section -->
+        </div>
+        <!-- end of upper section -->
+
+        <!-- starting of table section -->
+        <div id="table-section">
+            <h3 class="table-heading">upload Images</h3>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>S.no</th>
+                        <th>name</th>
+                        <th>Size</th>
+                        <th>Preview</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="content">
+                        <td class="sno">1</td>
+                        <td>Java in a nutshell</td>
+                        <td>1 Mb</td>
+                        <td class="img-container"><img src="./img/book-icon.png" alt="lion"></td>
+                        <td>
+                            <i class="fas fa-edit"> </i>
+                            <i class="fas fa-trash-alt"></i>
+                        </td>
+                    </tr>
+                    <tr class="content">
+                        <td class="sno">1</td>
+                        <td>Java in a nutshell</td>
+                        <td>1 Mb</td>
+                        <td class="img-container"><img src="./img/book-icon.png" alt="lion"></td>
+                        <td>
+                            <i class="fas fa-edit"></i>
+                            <i class="fas fa-trash-alt"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- end of table section -->
+        </div>
+        <!-- end of container -->
+    </div>
+</body>
+
+</html>
