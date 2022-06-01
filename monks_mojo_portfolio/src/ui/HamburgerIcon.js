@@ -1,8 +1,17 @@
+import { on, cn } from "../Styled";
+
 import MenuSvg from "../svg/menu.svg";
-function HamburgerIcon() {
+function HamburgerIcon(props) {
   return (
-    <button type="button" className="p-2 sm:mr-4 lg:hidden">
-      <img src={MenuSvg} alt="hamburger icon" />
+    <button
+      type="button"
+      className={props.show ? on : cn}
+      aria-controls="mobile-menu-2"
+      aria-expanded="false"
+      onClick={props.toggleShow}
+    >
+      <span className="sr-only">Open main menu</span>
+      <img src={MenuSvg} alt="HamburgerIcon" />
     </button>
   );
 }
