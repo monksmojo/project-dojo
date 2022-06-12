@@ -6,10 +6,10 @@ function NavBarList(props) {
   return (
     <div className={props.show ? showNav : hideNav} id="mobile-menu-2">
       <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium">
-        <NavBarLinks pageLink="/about" pageName="Home" />
+        <NavBarLinks pageLink="/" pageName="Home" />
         <NavBarLinks pageLink="/about" pageName="About Me" />
-        <NavBarLinks pageLink="/skills" pageName="Skills" />
         <NavBarLinks pageLink="/experience" pageName="Experience" />
+        <NavBarLinks pageLink="/skills" pageName="Skills" />
         <NavBarLinks pageLink="/contact" pageName="Contact Me" />
       </ul>
     </div>

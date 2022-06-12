@@ -1,30 +1,29 @@
-import bannerImage from "../img/banner_dp.png";
+import AboutBtn from "../components/about/AboutBtn";
+import AboutCard from "../components/about/AboutCard";
 
+// overflow-hidden text-white lg:grid bg-gradient-to-b  from-purple-800 to-indigo-800 lg:grid-cols-2 lg:items-center
 function AboutPage() {
   return (
-    <aside class="overflow-hidden text-white lg:grid bg-gradient-to-b  from-purple-800 to-indigo-800 lg:grid-cols-2 lg:items-center">
-      <div class="lg:pt-24">
-        <div class="relative w-full h-64 sm:h-96 lg:h-[500px]">
-          <img
-            class="absolute inset-0 object-cover w-full h-full lg:rounded-tl-3xl"
-            src={bannerImage}
-            alt=""
-          />
-        </div>
-      </div>
-      <div class="p-12 text-center sm:p-16 lg:p-24 lg:text-left">
-        <div class="max-w-lg mx-auto lg:ml-0 lg:pt-12">
-          <p class="text-3xl font-bold sm:text-4xl">
-            Lorem ipsum, dolor sit amet consectetur.
+    <section className="bg-gradient-to-b  from-gray-800 to-indigo-800 text-gray-100">
+      <div className="container flex flex-col-reverse justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-around">
+        <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <h1 className="text-5xl font-bold leading-none sm:text-6xl">
+            👋 It's Me
+            <br />
+            <span className="text-violet-400">Monks </span>Mojo
+          </h1>
+          <p className="mt-6 mb-8 text-xl sm:mb-12">
+            👨‍💻 Software Engineer 🧰Application Developer <br /> 🍬Jolly Bean 🦸‍♂️
+            Code Ranger
           </p>
-
-          <p class="mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus iusto odit, magni repellat aliquam!
-          </p>
+          <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+            <AboutBtn pageLink="/contact" btnText="Contact me" />
+            <AboutBtn pageLink="/resume" btnText="My Resume" />
+          </div>
         </div>
+        <AboutCard />
       </div>
-    </aside>
+    </section>
   );
 }
 
