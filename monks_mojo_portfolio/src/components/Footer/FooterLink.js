@@ -1,12 +1,16 @@
-import { NavLink } from "react-router-dom";
-
 function FooterLink(props) {
   return (
     <li>
-      <NavLink to={props.linkTo} className="text-white transition hover:text-yellow-400">
+      <a
+        href={props.linkTo}
+        rel="noreferrer"
+        className="text-white transition hover:text-yellow-400"
+        target="_blank"
+      >
         <span className="sr-only">{props.linkName}</span>
+
         <img src={props.icon} alt={props.linkName} />
-      </NavLink>
+      </a>
     </li>
   );
 }

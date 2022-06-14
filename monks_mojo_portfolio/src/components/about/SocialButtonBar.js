@@ -2,6 +2,8 @@ import SocialLink from "./SocialLink";
 import GitHubSvg from "../../svg/github.svg";
 import LinkedInSvg from "../../svg/linkedin.svg";
 import TwitterSvg from "../../svg/twitter.svg";
+import HackerRankSvg from "../../svg/hackerrank.svg";
+import { C } from "../../Constants";
 
 function SocialButtonBar() {
   return (
@@ -13,17 +15,22 @@ function SocialButtonBar() {
         <SocialLink
           socialName={"Github"}
           socialIcon={GitHubSvg}
-          socialLink={""}
+          socialLink={C.github}
         />
         <SocialLink
           socialName={"LinkedIn"}
           socialIcon={LinkedInSvg}
-          socialLink={""}
+          socialLink={C.linkedIn}
         />
         <SocialLink
           socialName={"Twitter"}
           socialIcon={TwitterSvg}
-          socialLink={""}
+          socialLink={C.twitter}
+        />
+        <SocialLink
+          socialName={"hackerRank"}
+          socialIcon={HackerRankSvg}
+          socialLink={C.hackerRank}
         />
       </ul>
     </div>

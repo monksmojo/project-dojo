@@ -4,6 +4,7 @@ import { C } from "../../Constants";
 import GitHubSvg from "../../svg/github.svg";
 import LinkedInSvg from "../../svg/linkedin.svg";
 import TwitterSvg from "../../svg/twitter.svg";
+import HackerRankSvg from "../../svg/hackerrank.svg";
 
 function DropDownBar(props) {
   return (
@@ -37,6 +38,16 @@ function DropDownBar(props) {
             className="display: inline"
             src={TwitterSvg}
             alt="twitter-icon"
+          />
+        </NavIcons>
+        <NavIcons
+          externalLink="https://www.hackerrank.com/monks_mojo"
+          linkName="Hacker Rank"
+        >
+          <img
+            className="display: inline"
+            src={HackerRankSvg}
+            alt="hackerRank-icon"
           />
         </NavIcons>
       </ul>

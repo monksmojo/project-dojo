@@ -19,3 +19,9 @@ export const on =
 
 export const cn =
   "inline-flex items-center p-2 ml-1 text-sm rounded-lg md:hidden  text-gray-400 hover:bg-gray-700";
+
+export const showEaster =
+  "overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full";
+
+export const hideEaster =
+  "hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full";

@@ -6,7 +6,7 @@ export default function ResumePage() {
 
   return (
     <div className="flex justify-center bg-gradient-to-b  from-gray-800 to-indigo-900 py-10">
-      <div className="overflow-auto sm:px-10">
+      <div className="overflow-auto sm:max-w-xl">
         <Document file={resume} options={{ workerSrc: "/pdf.worker.js" }}>
           <Page pageNumber={1} />
         </Document>
