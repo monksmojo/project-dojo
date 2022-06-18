@@ -15,29 +15,19 @@ import { useState, useEffect, useCallback } from "react";
 
 function Footer(props) {
   const [showModal, setShowModal] = useState(false);
-  const [currentKey, setCurrentKey] = useState("");
-  const [currentPhrase, setCurrentPhrase] = useState("");
+  const [currentPhrase, setCurrentPhrase] = useState([]);
 
   const activateEasterEgg = () => {
     setShowModal(true);
-    setCurrentPhrase("");
-    setCurrentKey("");
+    setCurrentPhrase([]);
   };
 
-  const readCurrentKey = useCallback(
-    (value) => {
-      setCurrentKey(value);
-      setCurrentPhrase(currentPhrase + currentKey);
-      if (currentPhrase === C.key) {
-        activateEasterEgg();
-      }
-    },
-    [currentKey, currentPhrase]
-  );
-
   useEffect(() => {
-    readCurrentKey("");
-  }, [readCurrentKey]);
+    console.log(currentPhrase.join(""));
+    if (currentPhrase.join("") === C.key) {
+      activateEasterEgg();
+    }
+  }, [currentPhrase]);
 
   return (
     <footer className="bg-gradient-to-b from-gray-800 to-indigo-800  text-white">
@@ -46,7 +36,10 @@ function Footer(props) {
         <FooterLogo />
         <FooterMsg />
         <EasterModal showModal={showModal} setShowModal={setShowModal} />
-        <EasterEgg readKey={readCurrentKey} />
+        <EasterEgg
+          currentPhrase={currentPhrase}
+          setCurrentPhrase={setCurrentPhrase}
+        />
         <ul className="flex justify-center gap-6 mt-12 md:gap-8">
           <FooterLink
             icon={twitterICON}
