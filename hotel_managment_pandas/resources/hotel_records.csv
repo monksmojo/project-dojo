@@ -1,0 +1,21 @@
+Name,Contact_Number,Address,Check_In,Check_Out,Room_Type,Total_Price,Is_Checked_In,Guest_Country
+Sameer,+91-9988776655,Block-C Janak Puri New Delhi Delhi India,25-12-2022,25-01-2023,Deluxe,45000.0,True,India
+John,+91-9876543210,123 Main Street New York NY USA,10-05-2023,15-05-2023,Super Deluxe,10000.0,True,USA
+Rahul,+91-9876543211,456 Park Avenue Mumbai Maharashtra India,01-07-2023,10-07-2023,Standard,7000.0,False,India
+Emily,+91-9876543212,789 Oak Street London England UK,15-08-2023,25-08-2023,Super Deluxe,18000.0,True,UK
+Sandeep,+91-9876543213,246 Pine Street Bengaluru Karnataka India,05-10-2023,15-10-2023,Suit,30000.0,True,India
+Sophia,+91-9876543214,789 Maple Avenue San Francisco CA USA,20-12-2023,30-12-2023,Deluxe,21000.0,False,USA
+Arjun,+91-9876543215,987 Elm Street Jaipur Rajasthan India,10-02-2024,20-02-2024,Standard,6000.0,True,India
+Oliver,+91-9876543216,654 Cedar Avenue Paris France France,25-04-2024,05-05-2024,Deluxe,7500.0,False,France
+Aarav,+91-9876543217,321 Walnut Street Kolkata West Bengal India,15-06-2024,25-06-2024,Super Deluxe,16000.0,True,India
+Isabella,+91-9876543218,876 Birch Street Rome Italy Italy,01-08-2024,10-08-2024,Suit,20000.0,True,Italy
+Ravi,+91-9876543219,753 Pine Street Chennai Tamil Nadu India,12-09-2024,18-09-2024,Standard,6000.0,True,India
+Emma,+91-9876543220,987 Oak Avenue Sydney New South Wales Australia,05-11-2024,10-11-2024,Deluxe,9000.0,True,Australia
+Aryan,+91-9876543221,246 Maple Street Brisbane Queensland Australia,25-12-2024,02-01-2025,Super Deluxe,14000.0,True,Australia
+Mia,+91-9876543222,753 Elm Avenue Barcelona Catalonia Spain,15-02-2025,25-02-2025,Suit,22500.0,True,Spain
+Abhishek,+91-9876543223,987 Walnut Street Bangkok Bangkok Thailand,01-04-2025,10-04-2025,Deluxe,10500.0,False,Thailand
+Liam,+91-9876543224,246 Cedar Avenue Vancouver British Columbia Canada,10-06-2025,18-06-2025,Super Deluxe,18000.0,True,Canada
+Anaya,+91-9876543225,753 Birch Street Auckland Auckland New Zealand,25-08-2025,05-09-2025,Standard,5000.0,True,New Zealand
+Alexander,+91-9876543226,987 Pine Avenue Tokyo Kanto Japan,15-10-2025,20-10-2025,Suit,12500.0,True,Japan
+Sanvi,+91-9876543227,246 Oak Street Mexico City Mexico City Mexico,01-12-2025,10-12-2025,Standard,7000.0,True,Mexico
+Leo,+91-9876543228,753 Maple Avenue Cairo Cairo Egypt,20-01-2026,30-01-2026,Deluxe,13500.0,False,Egypt
