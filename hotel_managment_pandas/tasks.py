@@ -2,6 +2,7 @@ from insert_record import insert_record
 from delete_record import delete_record
 from get_records import *
 from init import loadDataFrameToCsv
+from plot import *
 
 
 def init_execute_task(df, option):
@@ -23,7 +24,15 @@ def init_execute_task(df, option):
     elif (option == "8"):
         return get_all_reservation_checked_in_status(df, False)
     elif (option == "9"):
+        return plot_guests_by_country(df)
+    elif (option == "10"):
+        return plot_guest_by_check_in_status(df)
+    elif (option == "11"):
         return loadDataFrameToCsv(df)
+    elif (option == "12"):
+        print("Exiting...")
+        return False
+
     else:
         print("Invalid Option")
         return False
@@ -39,7 +48,10 @@ def taskList():
         "6": "Search a booking Using check-out date",
         "7": "See all guests who are checked in",
         "8": "See all guests who are checked out",
-        "9": "Save reservations back to csv"
+        "9": "Plot the pie chart of guest by the country",
+        "10": "Plot the bar graph of guest by the checked in status",
+        "11": "Save reservations back to csv",
+        "12": "Exit the application"
     }
     for key in TASK_DICT:
         print(f"     {key} --- {TASK_DICT[key]}      ",)
